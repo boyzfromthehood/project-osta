@@ -286,7 +286,14 @@ function fill_parent(parent, source, construct) {
 
 function format_date(date) {
     const d = new Date(date);
-    return `${d.getDay()}.${d.getMonth()}.${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`;
+
+    let [full_date, time] = d.toISOString().split("T");
+    let [year, month, day] = full_date.split("-");
+    let [hours, minutes] = time.split(".")[0].split(":");
+    const fld = [day, month, year].join(".") + " " + [hours, minutes].join(":");
+
+    return fld;
+    // return `${d.getDay()}.${d.getMonth()}.${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`;
 }
 
 async function handle_form_submit(e) {
