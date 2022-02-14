@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Statistics</title>
+        <link rel="stylesheet" href="/css/main.css" />
+        <script src="/js/stats.js" defer></script>
+    </head>
+    <body>
+        <header class="header header-background">
+            <div class="container header-container">
+                <h1>Osta</h1>
+                <div class="links">
+                    <a href="/">Admin</a>
+                    <a href="/stats">Stats</a>
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
+        </header>
+        <section class="stats">
+            <div class="container">
+                <h1>Statistics</h1>
+                <div data-stats-parent class="block stats-block">
+                    <!-- stats item block -->
+                    loading...
+                    <!-- stats item end -->
+                </div>
+                <div class="buttons">
+                    <button
+                        class="btn-reset button"
+                        onclick="window.location='./csv/'"
+                    >
+                        .csv
+                    </button>
+                    <button
+                        class="btn-reset button"
+                        onclick="window.location='./json/'"
+                    >
+                        .json
+                    </button>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

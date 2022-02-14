@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register</title>
+        <link rel="stylesheet" href="/css/main.css" />
+        <script src="/js/register.js" defer></script>
+    </head>
+    <body>
+        <section class="auth">
+            <div class="container auth-container">
+                <h1>Register</h1>
+                <div class="auth-block block">
+                    <div class="elements">
+                        <form data-form>
+                            <div>
+                                <input
+                                    data-username
+                                    type="text"
+                                    class="subblock auth-input"
+                                    placeholder="Username"
+                                    required
+                                />
+                                <div class="error_message hidden">
+                                    incorrect username
+                                </div>
+                            </div>
+
+                            <div>
+                                <input
+                                    data-password
+                                    type="password"
+                                    class="subblock auth-input"
+                                    placeholder="Password"
+                                    required
+                                />
+                                <div class="error_message hidden">
+                                    incorrect password1
+                                </div>
+                            </div>
+
+                            <div>
+                                <input
+                                    data-password
+                                    type="password"
+                                    class="subblock auth-input"
+                                    placeholder="Password"
+                                    required
+                                />
+                                <div class="error_message hidden">
+                                    incorrect password2
+                                </div>
+                            </div>
+                            <div>
+                                <button
+                                    data-submit-button
+                                    type="submit"
+                                    class="btn-reset button"
+                                >
+                                    Register
+                                </button>
+                                <a href="/login">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

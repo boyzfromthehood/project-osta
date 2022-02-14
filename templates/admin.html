@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin</title>
+        <link rel="stylesheet" href="/css/main.css" />
+        <script src="/js/admin.js" defer></script>
+    </head>
+    <body>
+        <header class="header header-background">
+            <div class="container header-container">
+                <h1>Osta</h1>
+                <div class="links">
+                    <a href="/">Admin</a>
+                    <a href="/stats">Stats</a>
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
+        </header>
+
+
+        </div>
+
+        <section class="admin-pan">
+            <div class="container">
+                <div class="pan-block">
+                    <h2>Ostas</h2>
+                    <div>
+                        <div class="block btn-block">
+                            <button
+                                onclick="popWindow(event)"
+                                class="btn-reset button"
+                            >
+                                Add
+                            </button>
+                            <!-- popWindow addOstas block -->
+                            <div class="popWindow hidden">
+                                <div class="block edit-block">
+                                    <h2>Osta</h2>
+                                    <div>
+                                        <form data-form-add="osta">
+                                            <input
+                                                name="name"
+                                                required
+                                                type="text"
+                                                class="subblock edit-subblock"
+                                                placeholder="Name"
+                                            />
+                                            <input
+                                                name="address"
+                                                required
+                                                type="text"
+                                                class="subblock edit-subblock"
+                                                placeholder="Adress"
+                                            />
+                                            <div class="buttons">
+                                                <button
+                                                    type="submit"
+                                                    class="btn-reset button"
+                                                >
+                                                    Add
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    onclick="popWindow()"
+                                                    class="btn-reset button"
+                                                >
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- popWindow addOstas end -->
+                        </div>
+                        <div data-ostas-parent class="block admin-block">
+                            <!-- ostas block -->
+                            loading...
+                            <!-- ostas block end -->
+                        </div>
+                    </div>
+                </div>
+                <div class="pan-block">
+                    <h2>Ships</h2>
+                    <div>
+                        <div class="block btn-block">
+                            <button
+                                onclick="popWindow(event)"
+                                class="btn-reset button"
+                            >
+                                Add
+                            </button>
+                            <!-- popWindow addShip block -->
+                            <div class="popWindow hidden">
+                                <div class="block edit-block">
+                                    <h2>Ship</h2>
+                                    <div>
+                                        <form data-form-add="ship">
+                                            <input
+                                                name="model"
+                                                required
+                                                type="text"
+                                                class="subblock edit-subblock"
+                                                placeholder="Model"
+                                            />
+                                            <input
+                                                name="release"
+                                                required
+                                                type="text"
+                                                class="subblock edit-subblock"
+                                                placeholder="Release"
+                                            />
+                                            <input
+                                                name="numberOfPlaces"
+                                                required
+                                                type="text"
+                                                class="subblock edit-subblock"
+                                                placeholder="Number of places"
+                                            />
+                                            <div class="buttons">
+                                                <button
+                                                    type="submit"
+                                                    class="btn-reset button"
+                                                >
+                                                    Add
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    onclick="popWindow()"
+                                                    class="btn-reset button"
+                                                >
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- popWindow addShip end -->
+                        </div>
+                        <div data-ships-parent class="block admin-block">
+                            <!-- ships block -->
+                            loading...
+                            <!-- ships block end -->
+                        </div>
+                    </div>
+                </div>
+                <div class="pan-block">
+                    <h2>Tickets</h2>
+                    <div>
+                        <div class="block btn-block">
+                            <button
+                                onclick="popWindow(event)"
+                                class="btn-reset button"
+                            >
+                                Add
+                            </button>
+                            <!-- popWindow addTicket block -->
+                            <div class="popWindow hidden">
+                                <div class="block edit-block">
+                                    <h2>Ticket</h2>
+                                    <div>
+                                        <form data-form-add="ticket">
+                                            <div class="inputs">
+                                                <input
+                                                    name="leave"
+                                                    required
+                                                    type="datetime-local"
+                                                    class="subblock edit-subblock"
+                                                    placeholder="Date"
+                                                    max="2090-12-31T23:59:59"
+                                                />
+                                                <input
+                                                    name="arrival"
+                                                    required
+                                                    type="datetime-local"
+                                                    class="subblock edit-subblock"
+                                                    placeholder="Date"
+                                                    max="2090-12-31T23:59:59"
+                                                />
+                                            </div>
+                                            <div class="inputs">
+                                                <input
+                                                    name="from"
+                                                    required
+                                                    type="text"
+                                                    class="subblock edit-subblock"
+                                                    placeholder="From"
+                                                />
+                                                <input
+                                                    name="to"
+                                                    required
+                                                    type="text"
+                                                    class="subblock edit-subblock"
+                                                    placeholder="To"
+                                                />
+                                            </div>
+                                            <input
+                                                required
+                                                name="ship"
+                                                type="text"
+                                                class="subblock edit-subblock"
+                                                placeholder="Ship"
+                                            />
+                                            <div class="buttons">
+                                                <button
+                                                    type="submit"
+                                                    class="btn-reset button"
+                                                >
+                                                    Add
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    onclick="popWindow()"
+                                                    class="btn-reset button"
+                                                >
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- popWindow addTicket end -->
+                        </div>
+                        <div data-ticket-parent class="block admin-block">
+                            <!-- ticket block -->
+                            loading...
+                            <!-- ticket block end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
