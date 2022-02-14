@@ -25,7 +25,6 @@ async function togglePop(id = null) {
     if (!id) return popWin.classList.toggle("hidden");
 
     const ticket = tickets.filter((t) => t._id == id)[0];
-    G;
     Object.keys(ticket).forEach((key) => {
         const s = popWin.querySelector(`[data-change-${key}]`);
         if (!s) return;

@@ -1,4 +1,5 @@
 # PUT
+
 from __main__ import (
     app,
     request,
@@ -11,14 +12,12 @@ from __main__ import (
     uuid4,
     datetime,
 )
-from cProfile import (
-    label,
-)  # https://stackoverflow.com/questions/11994325/how-to-divide-flask-app-into-multiple-py-files
+
+# https://stackoverflow.com/questions/11994325/how-to-divide-flask-app-into-multiple-py-files
 
 
 @app.route("/tickets", methods=["PUT"])
 def put_tickets():
-
     if "user" in session and session["user"]["privledge"] == "ADMIN":
         new_tickets = request.json
         new_tickets["_id"] = "tk_" + str(uuid4())
